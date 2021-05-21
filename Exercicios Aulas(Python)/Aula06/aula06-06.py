@@ -1,18 +1,20 @@
-def imc(nota):
+def calculaConceito(nota):
     
-    resultado = nota
+    resultado = float(nota)
 
-    if resultado < 18:
-        print(f"IMC é {resultado:.1f} Classificado na Tabela Como Magraza 0")
-    elif resultado < 25:
-        print(f"IMC é {resultado:.1f} Classificado na Tabela Como Normal 0")
-    elif resultado < 30:
-        print(f"IMC é {resultado:.1f} Classificado na Tabela Como Sobrepeso I")
+    if resultado >= 9.0:
+        print(f"Nota {resultado:.1f} Conceito A")
+    elif resultado <= 8.0:
+         print(f"Nota {resultado:.1f} Conceito B")
+    elif resultado <= 7.0:
+         print(f"Nota {resultado:.1f} Conceito C")
+    elif resultado <= 6.0:
+         print(f"Nota {resultado:.1f} Conceito D")
     else:
-        print(f"IMC é {resultado:.1f} Classificado na Tabela Como Obsesidade II")
+         print(f"Nota {resultado:.1f} Conceito F")
 
 
-peso = float(input("Digite o peso "))
-altura = float(input("Digite a altura "))
 
-imc(peso,altura)
+nota = float(input("Digite Sua Nota "))
+
+calculaConceito(nota)
